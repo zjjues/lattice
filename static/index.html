@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fake Lattice 监控台</title>
+    <link rel="stylesheet" href="/static/style.css?v=local-map-18" />
+  </head>
+  <body>
+    <header class="status-bar">
+      <h1>Fake Lattice 监控台</h1>
+      <div class="status-items">
+        <span>WebSocket：<strong id="ws-status">未连接</strong></span>
+        <span>系统状态：<strong id="system-status">空闲</strong></span>
+        <span>当前态势：<strong id="situation-status">暂无目标</strong></span>
+        <span class="status-subtle">最近事件：<strong id="last-event">无</strong></span>
+      </div>
+    </header>
+    <section class="summary-strip" aria-label="态势摘要">
+      <button type="button" class="summary-card" data-summary-action="current-target">
+        <span class="summary-label">当前目标</span>
+        <strong id="summary-entities" class="summary-value">0</strong>
+      </button>
+      <button type="button" class="summary-card" data-summary-action="open-alerts">
+        <span class="summary-label">开放告警</span>
+        <strong id="summary-open-alerts" class="summary-value">0</strong>
+      </button>
+      <button type="button" class="summary-card" data-summary-action="high-alerts">
+        <span class="summary-label">高风险告警</span>
+        <strong id="summary-high-alerts" class="summary-value risk-high">0</strong>
+      </button>
+      <button type="button" class="summary-card" data-summary-action="recommendations">
+        <span class="summary-label">已生成建议</span>
+        <strong id="summary-recommendations" class="summary-value">0</strong>
+      </button>
+      <button type="button" class="summary-card" data-summary-action="tasks">
+        <span class="summary-label">总任务数</span>
+        <strong id="summary-total-tasks" class="summary-value">0</strong>
+      </button>
+      <button type="button" class="summary-card" data-summary-action="active-tasks">
+        <span class="summary-label">执行中任务</span>
+        <strong id="summary-active-tasks" class="summary-value risk-medium">0</strong>
+      </button>
+    </section>
+    <main class="app-main">
+      <section class="map-panel" aria-label="地图区域">
+        <div id="map" aria-label="本地 entity 地图"></div>
+      </section>
+      <div
+        id="panel-resizer"
+        class="panel-resizer"
+        role="separator"
+        aria-label="调整右侧面板宽度"
+        aria-orientation="vertical"
+      ></div>
+      <aside class="task-panel" aria-label="指控面板">
+        <section class="current-event-panel" aria-label="当前事件总览">
+          <div class="current-event-header">
+            <div>
+              <h2>当前事件</h2>
+              <p>当前正在关注的目标、告警、建议与任务</p>
+            </div>
+          </div>
+          <div id="current-event-card" class="current-event-card" aria-live="polite"></div>
+        </section>
+        <section class="task-workflow-panel panel-section panel-section-priority" data-panel-id="tasks" aria-label="任务面板">
+          <div class="task-panel-header panel-section-header">
+            <div class="panel-header-leading">
+              <button type="button" class="panel-drag-handle" data-drag-handle aria-label="拖动排序">⋮⋮</button>
+              <div>
+                <h2>任务面板</h2>
+                <p>总任务：<strong id="task-count">0</strong>　执行中：<strong id="task-active-count">0</strong></p>
+              </div>
+            </div>
+            <div class="panel-header-actions">
+              <button id="refresh-tasks" type="button">刷新任务</button>
+              <button
+                type="button"
+                class="panel-toggle-button"
+                data-panel-target="task-list"
+                aria-expanded="true"
+              >收起</button>
+            </div>
+          </div>
+          <div id="task-list" class="task-list" aria-live="polite"></div>
+        </section>
+        <section class="alert-panel panel-section" data-panel-id="alerts" aria-label="告警面板">
+          <div class="alert-panel-header">
+            <div class="panel-header-leading">
+              <button type="button" class="panel-drag-handle" data-drag-handle aria-label="拖动排序">⋮⋮</button>
+              <div>
+              <h2>告警面板</h2>
+              <p>告警数量：<strong id="alert-count">0</strong></p>
+              </div>
+            </div>
+            <button
+              type="button"
+              class="panel-toggle-button"
+              data-panel-target="alert-list"
+              aria-expanded="true"
+            >收起</button>
+          </div>
+          <div id="alert-list" class="alert-list" aria-live="polite"></div>
+        </section>
+        <section class="recommendation-panel panel-section" data-panel-id="recommendations" aria-label="建议面板">
+          <div class="recommendation-panel-header">
+            <div class="panel-header-leading">
+              <button type="button" class="panel-drag-handle" data-drag-handle aria-label="拖动排序">⋮⋮</button>
+              <div>
+              <h2>建议面板</h2>
+              <p>建议数量：<strong id="recommendation-count">0</strong></p>
+              </div>
+            </div>
+            <button
+              type="button"
+              class="panel-toggle-button"
+              data-panel-target="recommendation-list"
+              aria-expanded="true"
+            >收起</button>
+          </div>
+          <div id="recommendation-list" class="recommendation-list" aria-live="polite"></div>
+        </section>
+        <section class="entity-panel panel-section" data-panel-id="entities" aria-label="威胁目标面板">
+          <div class="entity-panel-header">
+            <div class="panel-header-leading">
+              <button type="button" class="panel-drag-handle" data-drag-handle aria-label="拖动排序">⋮⋮</button>
+              <div>
+              <h2>威胁目标</h2>
+              <p>目标数量：<strong id="entity-list-count">0</strong></p>
+              </div>
+            </div>
+            <button
+              type="button"
+              class="panel-toggle-button"
+              data-panel-target="entity-list"
+              aria-expanded="true"
+            >收起</button>
+          </div>
+          <div id="entity-list" class="entity-list" aria-live="polite"></div>
+        </section>
+      </aside>
+    </main>
+    <script src="/static/app.js?v=local-map-18"></script>
+  </body>
+</html>

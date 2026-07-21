@@ -1,0 +1,29 @@
+{
+  "tasks": {
+    "TASK_20260708_023422_C9C6AD": {
+      "taskId": "TASK_20260708_023422_C9C6AD",
+      "taskType": "RESPOND_TO_RECOMMENDATION",
+      "title": "根据建议执行处置任务",
+      "description": "持续跟踪目标轨迹",
+      "status": "ASSIGNED",
+      "priority": "NORMAL",
+      "relatedEntityId": "TRACK_UAV_001",
+      "assignedAssetId": "SIM_ASSET_001",
+      "resultSummary": null,
+      "createdAt": "2026-07-08T02:34:22.481965Z",
+      "updatedAt": "2026-07-08T02:34:22.481965Z",
+      "metadata": {
+        "createdFrom": "recommendation",
+        "alertId": "ALERT_20260708_023333_77EC4C",
+        "recommendationId": "REC_20260708_023422_EA5EC3",
+        "selectedAction": "持续跟踪目标轨迹",
+        "recommendedAssetTypes": [
+          "便携式无人机反制枪",
+          "固定式微波干扰站",
+          "多旋翼侦察无人机",
+          "光电追踪球"
+        ]
+      }
+    }
+  }
+}

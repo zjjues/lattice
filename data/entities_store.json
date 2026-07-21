@@ -1,0 +1,68 @@
+{
+  "entities": {
+    "TRACK_UAV_001": {
+      "entityId": "TRACK_UAV_001",
+      "description": "Simulated uav track ingested via local API",
+      "isLive": true,
+      "createdTime": "2026-07-08T10:00:00Z",
+      "expiryTime": "2026-07-08T02:33:33.952074Z",
+      "aliases": {
+        "name": "Unknown UAV"
+      },
+      "milView": {
+        "disposition": "unknown",
+        "environment": "air"
+      },
+      "location": {
+        "position": {
+          "latitudeDegrees": 31.2304,
+          "longitudeDegrees": 121.4737,
+          "altitudeMeters": 120.0
+        }
+      },
+      "ontology": {
+        "template": "TEMPLATE_TRACK",
+        "platformType": "Air Vehicle",
+        "specificType": "UAV"
+      },
+      "provenance": {
+        "source": "SIM_UAV_001",
+        "sourceUpdateTime": "2026-07-08T10:00:00Z"
+      },
+      "dataClassification": {
+        "level": "UNCLASSIFIED"
+      },
+      "metadata": {
+        "sourceType": "uav",
+        "sourceId": "SIM_UAV_001",
+        "sensorContext": {
+          "confidence": 0.86,
+          "zone": "ZONE_A",
+          "tags": [
+            "restricted_area_edge",
+            "fast_approach"
+          ]
+        },
+        "track": {
+          "speedMps": 21.5,
+          "headingDegrees": 72.0,
+          "identity": "unknown",
+          "platformType": "UAV"
+        },
+        "threat": {
+          "threatLevel": "HIGH",
+          "anomalyType": "restricted_area_intrusion",
+          "sensorSources": [
+            "SIM_UAV_001"
+          ],
+          "recommendation": "目标进入预设警戒区域，建议立即关注并确认身份。",
+          "zone": "ZONE_A",
+          "tags": [
+            "restricted_area_edge",
+            "fast_approach"
+          ]
+        }
+      }
+    }
+  }
+}

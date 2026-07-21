@@ -1,0 +1,11 @@
+{
+  "taskType": "INVESTIGATE_ENTITY",
+  "title": "调查目标",
+  "description": "对指定 entity 进行模拟调查任务",
+  "priority": "NORMAL",
+  "relatedEntityId": "AIS_SIM_MMSI_366000000",
+  "assignedAssetId": "SIM_ASSET_001",
+  "metadata": {
+    "reason": "local test"
+  }
+}

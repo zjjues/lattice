@@ -1,0 +1,272 @@
+[
+  {
+    "entityId": "AIS_SIM_MMSI_366000000",
+    "description": "Simulated AIS surface vessel 1",
+    "createdTime": "2026-06-08T01:53:56.997670Z",
+    "isLive": true,
+    "expiryTime": "2026-06-08T02:53:56.997699Z",
+    "aliases": {
+      "name": "SIM AIS VESSEL 0001",
+      "alternateIds": [
+        {
+          "id": "366000000",
+          "type": "ALT_ID_TYPE_MMSI_ID"
+        }
+      ]
+    },
+    "milView": {
+      "disposition": "DISPOSITION_NEUTRAL",
+      "environment": "ENVIRONMENT_SURFACE"
+    },
+    "location": {
+      "position": {
+        "latitudeDegrees": 33.73542053832062,
+        "longitudeDegrees": -117.93489012240947,
+        "altitudeHaeMeters": 0
+      }
+    },
+    "ontology": {
+      "template": "TEMPLATE_TRACK",
+      "platformType": "Surface Vessel",
+      "specificType": "SURFACE_VESSEL"
+    },
+    "provenance": {
+      "integrationName": "local-entity-generator",
+      "dataType": "SIMULATED_SURFACE_VESSEL",
+      "sourceName": "local_ais_simulator",
+      "sourceId": "local_ais_simulator",
+      "sourceUpdateTime": "2026-06-08T01:53:56.997670Z"
+    },
+    "dataClassification": {
+      "default": {
+        "level": "CLASSIFICATION_LEVELS_UNCLASSIFIED"
+      }
+    },
+    "metadata": {
+      "ais": {
+        "mmsi": "366000000",
+        "vesselName": "SIM AIS VESSEL 0001",
+        "speedKnots": 11.8,
+        "courseDegrees": 165.7,
+        "headingDegrees": 211,
+        "navigationStatus": "NOT_UNDER_COMMAND"
+      }
+    }
+  },
+  {
+    "entityId": "AIS_SIM_MMSI_366000001",
+    "description": "Simulated AIS surface vessel 2",
+    "createdTime": "2026-06-08T01:53:56.997732Z",
+    "isLive": true,
+    "expiryTime": "2026-06-08T02:53:56.997739Z",
+    "aliases": {
+      "name": "SIM AIS VESSEL 0002",
+      "alternateIds": [
+        {
+          "id": "366000001",
+          "type": "ALT_ID_TYPE_MMSI_ID"
+        }
+      ]
+    },
+    "milView": {
+      "disposition": "DISPOSITION_NEUTRAL",
+      "environment": "ENVIRONMENT_SURFACE"
+    },
+    "location": {
+      "position": {
+        "latitudeDegrees": 33.720476643290226,
+        "longitudeDegrees": -117.9462476473022,
+        "altitudeHaeMeters": 0
+      }
+    },
+    "ontology": {
+      "template": "TEMPLATE_TRACK",
+      "platformType": "Surface Vessel",
+      "specificType": "SURFACE_VESSEL"
+    },
+    "provenance": {
+      "integrationName": "local-entity-generator",
+      "dataType": "SIMULATED_SURFACE_VESSEL",
+      "sourceName": "local_ais_simulator",
+      "sourceId": "local_ais_simulator",
+      "sourceUpdateTime": "2026-06-08T01:53:56.997732Z"
+    },
+    "dataClassification": {
+      "default": {
+        "level": "CLASSIFICATION_LEVELS_UNCLASSIFIED"
+      }
+    },
+    "metadata": {
+      "ais": {
+        "mmsi": "366000001",
+        "vesselName": "SIM AIS VESSEL 0002",
+        "speedKnots": 11.8,
+        "courseDegrees": 235.5,
+        "headingDegrees": 284,
+        "navigationStatus": "UNDER_WAY_USING_ENGINE"
+      }
+    }
+  },
+  {
+    "entityId": "AIS_SIM_MMSI_366000002",
+    "description": "Simulated AIS surface vessel 3",
+    "createdTime": "2026-06-08T01:53:56.997753Z",
+    "isLive": true,
+    "expiryTime": "2026-06-08T02:53:56.997756Z",
+    "aliases": {
+      "name": "SIM AIS VESSEL 0003",
+      "alternateIds": [
+        {
+          "id": "366000002",
+          "type": "ALT_ID_TYPE_MMSI_ID"
+        }
+      ]
+    },
+    "milView": {
+      "disposition": "DISPOSITION_NEUTRAL",
+      "environment": "ENVIRONMENT_SURFACE"
+    },
+    "location": {
+      "position": {
+        "latitudeDegrees": 33.71412874654035,
+        "longitudeDegrees": -117.88586516788949,
+        "altitudeHaeMeters": 0
+      }
+    },
+    "ontology": {
+      "template": "TEMPLATE_TRACK",
+      "platformType": "Surface Vessel",
+      "specificType": "SURFACE_VESSEL"
+    },
+    "provenance": {
+      "integrationName": "local-entity-generator",
+      "dataType": "SIMULATED_SURFACE_VESSEL",
+      "sourceName": "local_ais_simulator",
+      "sourceId": "local_ais_simulator",
+      "sourceUpdateTime": "2026-06-08T01:53:56.997753Z"
+    },
+    "dataClassification": {
+      "default": {
+        "level": "CLASSIFICATION_LEVELS_UNCLASSIFIED"
+      }
+    },
+    "metadata": {
+      "ais": {
+        "mmsi": "366000002",
+        "vesselName": "SIM AIS VESSEL 0003",
+        "speedKnots": 13.2,
+        "courseDegrees": 201.9,
+        "headingDegrees": 91,
+        "navigationStatus": "NOT_UNDER_COMMAND"
+      }
+    }
+  },
+  {
+    "entityId": "AIS_SIM_MMSI_366000003",
+    "description": "Simulated AIS surface vessel 4",
+    "createdTime": "2026-06-08T01:53:56.997767Z",
+    "isLive": true,
+    "expiryTime": "2026-06-08T02:53:56.997770Z",
+    "aliases": {
+      "name": "SIM AIS VESSEL 0004",
+      "alternateIds": [
+        {
+          "id": "366000003",
+          "type": "ALT_ID_TYPE_MMSI_ID"
+        }
+      ]
+    },
+    "milView": {
+      "disposition": "DISPOSITION_NEUTRAL",
+      "environment": "ENVIRONMENT_SURFACE"
+    },
+    "location": {
+      "position": {
+        "latitudeDegrees": 33.70892792402287,
+        "longitudeDegrees": -117.90687345787374,
+        "altitudeHaeMeters": 0
+      }
+    },
+    "ontology": {
+      "template": "TEMPLATE_TRACK",
+      "platformType": "Surface Vessel",
+      "specificType": "SURFACE_VESSEL"
+    },
+    "provenance": {
+      "integrationName": "local-entity-generator",
+      "dataType": "SIMULATED_SURFACE_VESSEL",
+      "sourceName": "local_ais_simulator",
+      "sourceId": "local_ais_simulator",
+      "sourceUpdateTime": "2026-06-08T01:53:56.997767Z"
+    },
+    "dataClassification": {
+      "default": {
+        "level": "CLASSIFICATION_LEVELS_UNCLASSIFIED"
+      }
+    },
+    "metadata": {
+      "ais": {
+        "mmsi": "366000003",
+        "vesselName": "SIM AIS VESSEL 0004",
+        "speedKnots": 16.3,
+        "courseDegrees": 50.7,
+        "headingDegrees": 320,
+        "navigationStatus": "AT_ANCHOR"
+      }
+    }
+  },
+  {
+    "entityId": "AIS_SIM_MMSI_366000004",
+    "description": "Simulated AIS surface vessel 5",
+    "createdTime": "2026-06-08T01:53:56.997783Z",
+    "isLive": true,
+    "expiryTime": "2026-06-08T02:53:56.997786Z",
+    "aliases": {
+      "name": "SIM AIS VESSEL 0005",
+      "alternateIds": [
+        {
+          "id": "366000004",
+          "type": "ALT_ID_TYPE_MMSI_ID"
+        }
+      ]
+    },
+    "milView": {
+      "disposition": "DISPOSITION_NEUTRAL",
+      "environment": "ENVIRONMENT_SURFACE"
+    },
+    "location": {
+      "position": {
+        "latitudeDegrees": 33.71101667001982,
+        "longitudeDegrees": -117.86966451400589,
+        "altitudeHaeMeters": 0
+      }
+    },
+    "ontology": {
+      "template": "TEMPLATE_TRACK",
+      "platformType": "Surface Vessel",
+      "specificType": "SURFACE_VESSEL"
+    },
+    "provenance": {
+      "integrationName": "local-entity-generator",
+      "dataType": "SIMULATED_SURFACE_VESSEL",
+      "sourceName": "local_ais_simulator",
+      "sourceId": "local_ais_simulator",
+      "sourceUpdateTime": "2026-06-08T01:53:56.997783Z"
+    },
+    "dataClassification": {
+      "default": {
+        "level": "CLASSIFICATION_LEVELS_UNCLASSIFIED"
+      }
+    },
+    "metadata": {
+      "ais": {
+        "mmsi": "366000004",
+        "vesselName": "SIM AIS VESSEL 0005",
+        "speedKnots": 4.6,
+        "courseDegrees": 5.7,
+        "headingDegrees": 94,
+        "navigationStatus": "AT_ANCHOR"
+      }
+    }
+  }
+]

@@ -1,0 +1,59 @@
+{
+  "events": {
+    "INGEST_20260708_023333_4A6CD1": {
+      "eventId": "INGEST_20260708_023333_4A6CD1",
+      "sourceType": "uav",
+      "sourceId": "SIM_UAV_001",
+      "eventType": "track_update",
+      "timestamp": "2026-07-08T10:00:00Z",
+      "track": {
+        "trackId": "TRACK_UAV_001",
+        "name": "Unknown UAV",
+        "identity": "unknown",
+        "platformType": "UAV",
+        "speedMps": 21.5,
+        "headingDegrees": 72.0,
+        "altitudeMeters": 120.0,
+        "location": {
+          "latitudeDegrees": 31.2304,
+          "longitudeDegrees": 121.4737
+        }
+      },
+      "sensorContext": {
+        "confidence": 0.86,
+        "zone": "ZONE_A",
+        "tags": [
+          "restricted_area_edge",
+          "fast_approach"
+        ]
+      },
+      "raw": {
+        "sourceType": "uav",
+        "sourceId": "SIM_UAV_001",
+        "eventType": "track_update",
+        "timestamp": "2026-07-08T10:00:00Z",
+        "track": {
+          "trackId": "TRACK_UAV_001",
+          "name": "Unknown UAV",
+          "identity": "unknown",
+          "platformType": "UAV",
+          "speedMps": 21.5,
+          "headingDegrees": 72,
+          "altitudeMeters": 120,
+          "location": {
+            "latitudeDegrees": 31.2304,
+            "longitudeDegrees": 121.4737
+          }
+        },
+        "sensorContext": {
+          "confidence": 0.86,
+          "zone": "ZONE_A",
+          "tags": [
+            "restricted_area_edge",
+            "fast_approach"
+          ]
+        }
+      }
+    }
+  }
+}

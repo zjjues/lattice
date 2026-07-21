@@ -1,0 +1,67 @@
+{
+  "alerts": {
+    "ALERT_20260708_023333_77EC4C": {
+      "alertId": "ALERT_20260708_023333_77EC4C",
+      "entityId": "TRACK_UAV_001",
+      "sourceType": "uav",
+      "sourceId": "SIM_UAV_001",
+      "alertType": "restricted_area_intrusion",
+      "riskLevel": "HIGH",
+      "title": "疑似目标进入警戒区",
+      "summary": "目标进入预设警戒区域，建议立即关注并确认身份。",
+      "status": "OPEN",
+      "location": {
+        "latitudeDegrees": 31.2304,
+        "longitudeDegrees": 121.4737
+      },
+      "evidence": [
+        "来源: uav / SIM_UAV_001",
+        "位置: 31.23040, 121.47370",
+        "命中规则: restricted area intrusion"
+      ],
+      "metadata": {
+        "eventId": "INGEST_20260708_023333_4A6CD1",
+        "zone": "ZONE_A",
+        "speedMps": 21.5,
+        "tags": [
+          "restricted_area_edge",
+          "fast_approach"
+        ],
+        "latestRecommendationId": "REC_20260708_023422_EA5EC3"
+      },
+      "createdAt": "2026-07-08T02:33:33.952623Z",
+      "updatedAt": "2026-07-08T02:34:22.467166Z"
+    },
+    "ALERT_20260708_023333_4F1ADD": {
+      "alertId": "ALERT_20260708_023333_4F1ADD",
+      "entityId": "TRACK_UAV_001",
+      "sourceType": "uav",
+      "sourceId": "SIM_UAV_001",
+      "alertType": "fast_approach",
+      "riskLevel": "HIGH",
+      "title": "目标高速接近",
+      "summary": "目标速度超过阈值，存在快速逼近风险。",
+      "status": "OPEN",
+      "location": {
+        "latitudeDegrees": 31.2304,
+        "longitudeDegrees": 121.4737
+      },
+      "evidence": [
+        "来源: uav / SIM_UAV_001",
+        "位置: 31.23040, 121.47370",
+        "速度 21.5 m/s 高于阈值 18.0 m/s"
+      ],
+      "metadata": {
+        "eventId": "INGEST_20260708_023333_4A6CD1",
+        "zone": "ZONE_A",
+        "speedMps": 21.5,
+        "tags": [
+          "restricted_area_edge",
+          "fast_approach"
+        ]
+      },
+      "createdAt": "2026-07-08T02:33:33.952689Z",
+      "updatedAt": "2026-07-08T02:33:33.952689Z"
+    }
+  }
+}

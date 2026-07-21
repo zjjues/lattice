@@ -1,0 +1,8 @@
+external/
+.env.local
+__pycache__/
+*.py[cod]
+logs/
+run/
+objects/
+.venv/

@@ -1,0 +1,34 @@
+[
+  {
+    "docId": "SOP_UAV_INTRUSION_001",
+    "docType": "SOP",
+    "title": "无人机进入警戒区处置预案",
+    "tags": ["uav", "intrusion", "restricted_area", "eo_sensor", "operator"],
+    "summary": "当不明无人机进入警戒区时，优先持续跟踪目标，调用附近光电设备进行二次确认，并通知值班人员人工复核。",
+    "content": "适用场景：不明无人机接近或进入限制区域。处置顺序：1. 持续跟踪目标轨迹；2. 调用附近 EO 设备或其他传感器复核；3. 记录位置、速度、航向和时间戳；4. 由值班人员人工确认身份；5. 必要时下发侦察或跟踪任务。"
+  },
+  {
+    "docId": "GUIDE_FAST_APPROACH_001",
+    "docType": "GUIDE",
+    "title": "高速接近目标研判指引",
+    "tags": ["fast_approach", "track", "radar", "uav"],
+    "summary": "当目标速度高于预设阈值并持续接近敏感区域时，应提高风险等级并优先判断目标意图。",
+    "content": "判据：速度超过阈值，且位置变化指向敏感区域。建议：结合相邻传感器继续观察，必要时提升到高优先级告警，准备创建响应任务。"
+  },
+  {
+    "docId": "CASE_MULTI_SENSOR_001",
+    "docType": "CASE",
+    "title": "多传感器联合确认案例",
+    "tags": ["multi_sensor", "confirmation", "camera", "radar", "uav"],
+    "summary": "当同一目标被两类以上传感器命中时，应优先汇总证据并提高态势置信度。",
+    "content": "案例说明：某目标先由雷达发现，再由光电设备确认。系统根据多源证据提升置信度，并建议值班员优先采纳跟踪和复核动作。"
+  },
+  {
+    "docId": "SOP_LOITERING_001",
+    "docType": "SOP",
+    "title": "低空目标盘旋滞留处置指引",
+    "tags": ["loitering", "hovering", "persistent_presence", "uav", "observation"],
+    "summary": "当目标在有限范围内持续低速活动时，应优先判断其观察、侦察或等待指令的意图。",
+    "content": "判据：同一目标多个轨迹点位集中在小范围内，且速度较低、持续时间超过阈值。建议：保持持续跟踪，调用附近传感器补充确认，并由值班员结合周边敏感点位判断是否升级处置。"
+  }
+]
