@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>北京飞行态势离线预览</title>
+  <style>
+    html,body{height:100%;margin:0;background:#071421;color:#dff4ff;font-family:system-ui,sans-serif}main{height:100%;display:grid;grid-template-rows:54px 1fr}header{display:flex;align-items:center;justify-content:space-between;padding:0 18px;background:#0a2234;border-bottom:1px solid #25627e}header b{font-size:18px}.tag{color:#ffcf66;font-size:13px}.map{position:relative;overflow:hidden;background:radial-gradient(circle at 54% 48%,#173b42,#0b202c 58%,#071421)}svg{width:100%;height:100%}.grid{stroke:#4b7e86;stroke-width:1;opacity:.2}.road{fill:none;stroke:#8bb4b0;stroke-width:2;opacity:.6}.ring{fill:none;stroke:#d6b76b;stroke-width:3;opacity:.8}.water{fill:#163f66;stroke:#2c82ad}.district{fill:#cfe7e9;font-size:16px;opacity:.8}.coord{fill:#6fa4ad;font-size:11px}.route{fill:none;stroke:#30e2ff;stroke-width:3;stroke-dasharray:8 6}.plane{fill:#ffde59;filter:drop-shadow(0 0 7px #ffde59)}.panel{position:absolute;top:18px;left:18px;width:270px;padding:14px;background:#06131ddd;border:1px solid #377c91;border-radius:8px;line-height:1.65;box-shadow:0 8px 28px #0008}.panel h3{margin:0 0 8px;color:#53ddff}.legend{position:absolute;right:16px;bottom:16px;padding:9px 12px;background:#06131ddd;border:1px solid #377c91;border-radius:6px;font-size:12px}.pulse{animation:pulse 1.6s infinite;transform-origin:center}@keyframes pulse{50%{opacity:.45;transform:scale(1.8)}}
+  </style>
+</head>
+<body><main><header><b>Fake Lattice · 北京飞行态势</b><span class="tag">本地示意底图 · 非导航用途</span></header><section class="map">
+  <svg viewBox="0 0 1200 760" role="img" aria-label="北京城区离线示意地图">
+    <g class="grid"><path d="M0 100H1200M0 220H1200M0 340H1200M0 460H1200M0 580H1200M0 700H1200M150 0V760M330 0V760M510 0V760M690 0V760M870 0V760M1050 0V760"/></g>
+    <path class="water" d="M1010 0c-35 90-20 180-55 255s-26 152 18 225 20 180-25 280h252V0z"/>
+    <g class="road"><path d="M70 640L1110 110M120 110L1080 660M20 410L1180 355M570 0L630 760M310 0L790 760M0 565L1200 240"/></g>
+    <ellipse class="ring" cx="600" cy="390" rx="105" ry="88"/><ellipse class="ring" cx="600" cy="390" rx="205" ry="166"/><ellipse class="ring" cx="600" cy="390" rx="325" ry="260"/><ellipse class="ring" cx="600" cy="390" rx="450" ry="345"/>
+    <g class="district"><text x="525" y="350">西城区</text><text x="630" y="350">东城区</text><text x="365" y="410">海淀区</text><text x="725" y="430">朝阳区</text><text x="500" y="610">丰台区</text><text x="835" y="615">通州区</text><text x="250" y="170">昌平区</text><text x="855" y="165">顺义区</text></g>
+    <g class="coord"><text x="8" y="115">40.1°N</text><text x="8" y="355">39.9°N</text><text x="8" y="595">39.7°N</text><text x="325" y="750">116.2°E</text><text x="685" y="750">116.5°E</text><text x="1040" y="750">116.8°E</text></g>
+    <polyline class="route" points="445,540 510,485 565,430 625,395 700,350 790,305"/>
+    <circle class="plane pulse" cx="700" cy="350" r="13"/><path class="plane" d="M700 326l8 18 23 8-23 5-8 23-7-23-24-5 24-8z"/>
+  </svg>
+  <aside class="panel"><h3>ALFA-SAMPLE-01</h3><div>位置：39.93°N, 116.49°E</div><div>高度：165 m</div><div>空速：21.2 m/s</div><div>航向：88.5°</div><div>状态：正常样例</div><div>数据链路：FlightFrame → Entity</div></aside>
+  <div class="legend">◎ 飞机位置　- - 飞行轨迹　金色线：环路示意<br>© OpenStreetMap 数据接口预留；当前未下载真实地图</div>
+</section></main></body></html>

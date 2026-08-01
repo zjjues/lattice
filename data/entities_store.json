@@ -63,6 +63,566 @@
           ]
         }
       }
+    },
+    "alfa_engine_failure_sample": {
+      "entityId": "alfa_engine_failure_sample",
+      "description": "Simulated flight-dataset track ingested via local API",
+      "isLive": true,
+      "createdTime": "2026-07-30T01:43:50.832597Z",
+      "expiryTime": "2026-07-30T01:43:50.833906Z",
+      "aliases": {
+        "name": "alfa_engine_failure_sample"
+      },
+      "milView": {
+        "disposition": "unknown",
+        "environment": "air"
+      },
+      "location": {
+        "position": {
+          "latitudeDegrees": 37.22811,
+          "longitudeDegrees": -80.42127,
+          "altitudeMeters": 164.8
+        }
+      },
+      "ontology": {
+        "template": "TEMPLATE_TRACK",
+        "platformType": "Air Vehicle",
+        "specificType": "UAV"
+      },
+      "provenance": {
+        "source": "alfa_engine_failure_sample",
+        "sourceUpdateTime": "2026-07-30T01:43:50.832597Z"
+      },
+      "dataClassification": {
+        "level": "UNCLASSIFIED"
+      },
+      "metadata": {
+        "sourceType": "flight-dataset",
+        "sourceId": "alfa_engine_failure_sample",
+        "sensorContext": {
+          "confidence": 1.0,
+          "zone": null,
+          "tags": [
+            "flight",
+            "alfa"
+          ]
+        },
+        "track": {
+          "speedMps": 19.1,
+          "headingDegrees": 88.4,
+          "identity": "unknown",
+          "platformType": "UAV"
+        },
+        "threat": {
+          "threatLevel": "HIGH",
+          "anomalyType": "fast_approach",
+          "sensorSources": [
+            "alfa_engine_failure_sample"
+          ],
+          "recommendation": "目标速度超过阈值，存在快速逼近风险。",
+          "zone": null,
+          "tags": [
+            "flight",
+            "alfa"
+          ]
+        }
+      }
+    },
+    "alfa-e2e-mvp": {
+      "entityId": "alfa-e2e-mvp",
+      "description": "Simulated flight-dataset track ingested via local API",
+      "isLive": true,
+      "createdTime": "2026-07-30T01:46:46.732148Z",
+      "expiryTime": "2026-07-30T01:46:46.733634Z",
+      "aliases": {
+        "name": "alfa-e2e-mvp"
+      },
+      "milView": {
+        "disposition": "unknown",
+        "environment": "air"
+      },
+      "location": {
+        "position": {
+          "latitudeDegrees": 37.22812,
+          "longitudeDegrees": -80.42106,
+          "altitudeMeters": 163.7
+        }
+      },
+      "ontology": {
+        "template": "TEMPLATE_TRACK",
+        "platformType": "Air Vehicle",
+        "specificType": "UAV"
+      },
+      "provenance": {
+        "source": "alfa-e2e-mvp",
+        "sourceUpdateTime": "2026-07-30T01:46:46.732148Z"
+      },
+      "dataClassification": {
+        "level": "UNCLASSIFIED"
+      },
+      "metadata": {
+        "sourceType": "flight-dataset",
+        "sourceId": "alfa-e2e-mvp",
+        "sensorContext": {
+          "confidence": 1.0,
+          "zone": null,
+          "tags": [
+            "flight",
+            "alfa"
+          ]
+        },
+        "track": {
+          "speedMps": 16.9,
+          "headingDegrees": 89.1,
+          "identity": "unknown",
+          "platformType": "UAV"
+        },
+        "threat": {
+          "threatLevel": "HIGH",
+          "anomalyType": "dataset_fault_annotation",
+          "sensorSources": [
+            "alfa-e2e-mvp"
+          ],
+          "recommendation": "The source dataset marks this frame as faulty. This is ground truth, not a model detection.",
+          "zone": null,
+          "tags": [
+            "flight",
+            "alfa"
+          ]
+        }
+      },
+      "flightTelemetry": {
+        "dataset": "ALFA",
+        "timestampMs": 2000,
+        "attitude": {
+          "rollDegrees": 3.4,
+          "pitchDegrees": -2.8,
+          "yawDegrees": 89.1,
+          "frame": "NED"
+        },
+        "velocity": {
+          "northMetersPerSecond": 0.5,
+          "eastMetersPerSecond": 16.8,
+          "downMetersPerSecond": 1.9,
+          "groundSpeedMetersPerSecond": 16.9,
+          "airSpeedMetersPerSecond": 16.2
+        },
+        "controls": {
+          "throttle": 0.96
+        },
+        "vehicle": {
+          "batteryVoltageVolts": null,
+          "flightMode": "AUTO"
+        },
+        "fault": {
+          "active": true,
+          "type": "engine_failure"
+        }
+      }
+    },
+    "flight-http-test": {
+      "entityId": "flight-http-test",
+      "description": "Simulated flight-dataset track ingested via local API",
+      "isLive": true,
+      "createdTime": "2026-08-01T08:42:49.566007Z",
+      "expiryTime": "2026-08-01T08:42:49.578638Z",
+      "aliases": {
+        "name": "flight-http-test"
+      },
+      "milView": {
+        "disposition": "unknown",
+        "environment": "air"
+      },
+      "location": {
+        "position": {
+          "latitudeDegrees": 37.22812,
+          "longitudeDegrees": -80.42106,
+          "altitudeMeters": 163.7
+        }
+      },
+      "ontology": {
+        "template": "TEMPLATE_TRACK",
+        "platformType": "Air Vehicle",
+        "specificType": "UAV"
+      },
+      "provenance": {
+        "source": "flight-http-test",
+        "sourceUpdateTime": "2026-08-01T08:42:49.566007Z"
+      },
+      "dataClassification": {
+        "level": "UNCLASSIFIED"
+      },
+      "metadata": {
+        "sourceType": "flight-dataset",
+        "sourceId": "flight-http-test",
+        "sensorContext": {
+          "confidence": 1.0,
+          "zone": null,
+          "tags": [
+            "flight",
+            "alfa"
+          ]
+        },
+        "track": {
+          "speedMps": 16.9,
+          "headingDegrees": 89.1,
+          "identity": "unknown",
+          "platformType": "UAV"
+        },
+        "threat": {
+          "threatLevel": "HIGH",
+          "anomalyType": "dataset_fault_annotation",
+          "sensorSources": [
+            "flight-http-test"
+          ],
+          "recommendation": "源数据集将当前帧标记为故障状态；这是样本真值，并非模型检测结果。",
+          "zone": null,
+          "tags": [
+            "flight",
+            "alfa"
+          ]
+        }
+      },
+      "flightTelemetry": {
+        "dataset": "ALFA",
+        "timestampMs": 2000,
+        "attitude": {
+          "rollDegrees": 3.4,
+          "pitchDegrees": -2.8,
+          "yawDegrees": 89.1,
+          "frame": "NED"
+        },
+        "velocity": {
+          "northMetersPerSecond": 0.5,
+          "eastMetersPerSecond": 16.8,
+          "downMetersPerSecond": 1.9,
+          "groundSpeedMetersPerSecond": 16.9,
+          "airSpeedMetersPerSecond": 16.2
+        },
+        "controls": {
+          "throttle": 0.96
+        },
+        "vehicle": {
+          "batteryVoltageVolts": null,
+          "flightMode": "AUTO"
+        },
+        "fault": {
+          "active": true,
+          "type": "engine_failure"
+        },
+        "location": {
+          "latitudeDegrees": 37.22812,
+          "longitudeDegrees": -80.42106,
+          "altitudeMeters": 163.7
+        },
+        "sensorStates": [
+          {
+            "sensorId": "flight-http-test/imu-0",
+            "platformId": "flight-http-test",
+            "type": "IMU",
+            "status": "NOMINAL",
+            "freshnessMs": 20,
+            "quality": 0.96,
+            "metrics": {
+              "rollDeg": 3.4,
+              "pitchDeg": -2.8,
+              "yawDeg": 89.1,
+              "clipping": false
+            },
+            "coverage": {
+              "mode": "ONBOARD"
+            },
+            "provenance": {
+              "adapter": "canonical-flight",
+              "dataset": "ALFA",
+              "timestampMs": 2000
+            }
+          },
+          {
+            "sensorId": "flight-http-test/gnss-0",
+            "platformId": "flight-http-test",
+            "type": "GNSS",
+            "status": "NOMINAL",
+            "freshnessMs": 200,
+            "quality": 0.94,
+            "metrics": {
+              "latitudeDeg": 37.22812,
+              "longitudeDeg": -80.42106,
+              "altitudeM": 163.7
+            },
+            "coverage": {
+              "mode": "GLOBAL"
+            },
+            "provenance": {
+              "adapter": "canonical-flight",
+              "dataset": "ALFA",
+              "timestampMs": 2000
+            }
+          },
+          {
+            "sensorId": "flight-http-test/airspeed-0",
+            "platformId": "flight-http-test",
+            "type": "AIRSPEED",
+            "status": "DEGRADED",
+            "freshnessMs": 100,
+            "quality": 0.7,
+            "metrics": {
+              "airSpeedMps": 16.2,
+              "groundSpeedMps": 16.9
+            },
+            "coverage": {
+              "mode": "ONBOARD"
+            },
+            "provenance": {
+              "adapter": "canonical-flight",
+              "dataset": "ALFA",
+              "timestampMs": 2000
+            }
+          },
+          {
+            "sensorId": "flight-http-test/battery-0",
+            "platformId": "flight-http-test",
+            "type": "BATTERY",
+            "status": "UNKNOWN",
+            "freshnessMs": 1000,
+            "quality": 0.5,
+            "metrics": {
+              "voltageV": null,
+              "flightMode": "AUTO"
+            },
+            "coverage": {
+              "mode": "ONBOARD"
+            },
+            "provenance": {
+              "adapter": "canonical-flight",
+              "dataset": "ALFA",
+              "timestampMs": 2000
+            }
+          },
+          {
+            "sensorId": "flight-http-test/engine-monitor-0",
+            "platformId": "flight-http-test",
+            "type": "ENGINE",
+            "status": "DEGRADED",
+            "freshnessMs": 250,
+            "quality": 1.0,
+            "metrics": {
+              "faultActive": true,
+              "faultType": "engine_failure"
+            },
+            "coverage": {
+              "mode": "ONBOARD"
+            },
+            "provenance": {
+              "adapter": "canonical-flight",
+              "dataset": "ALFA",
+              "timestampMs": 2000
+            }
+          }
+        ]
+      }
+    },
+    "beijing-flight-demo": {
+      "entityId": "beijing-flight-demo",
+      "description": "Simulated flight-dataset track ingested via local API",
+      "isLive": true,
+      "createdTime": "2026-08-01T08:42:50.797211Z",
+      "expiryTime": "2026-08-01T08:42:50.808963Z",
+      "aliases": {
+        "name": "beijing-flight-demo"
+      },
+      "milView": {
+        "disposition": "unknown",
+        "environment": "air"
+      },
+      "location": {
+        "position": {
+          "latitudeDegrees": 39.90422,
+          "longitudeDegrees": 116.40784,
+          "altitudeMeters": 163.7
+        }
+      },
+      "ontology": {
+        "template": "TEMPLATE_TRACK",
+        "platformType": "Air Vehicle",
+        "specificType": "UAV"
+      },
+      "provenance": {
+        "source": "beijing-flight-demo",
+        "sourceUpdateTime": "2026-08-01T08:42:50.797211Z"
+      },
+      "dataClassification": {
+        "level": "UNCLASSIFIED"
+      },
+      "metadata": {
+        "sourceType": "flight-dataset",
+        "sourceId": "beijing-flight-demo",
+        "sensorContext": {
+          "confidence": 1.0,
+          "zone": null,
+          "tags": [
+            "flight",
+            "alfa"
+          ]
+        },
+        "track": {
+          "speedMps": 16.9,
+          "headingDegrees": 89.1,
+          "identity": "unknown",
+          "platformType": "UAV"
+        },
+        "threat": {
+          "threatLevel": "HIGH",
+          "anomalyType": "dataset_fault_annotation",
+          "sensorSources": [
+            "beijing-flight-demo"
+          ],
+          "recommendation": "源数据集将当前帧标记为故障状态；这是样本真值，并非模型检测结果。",
+          "zone": null,
+          "tags": [
+            "flight",
+            "alfa"
+          ]
+        }
+      },
+      "flightTelemetry": {
+        "dataset": "ALFA",
+        "timestampMs": 2000,
+        "attitude": {
+          "rollDegrees": 3.4,
+          "pitchDegrees": -2.8,
+          "yawDegrees": 89.1,
+          "frame": "NED"
+        },
+        "velocity": {
+          "northMetersPerSecond": 0.5,
+          "eastMetersPerSecond": 16.8,
+          "downMetersPerSecond": 1.9,
+          "groundSpeedMetersPerSecond": 16.9,
+          "airSpeedMetersPerSecond": 16.2
+        },
+        "controls": {
+          "throttle": 0.96
+        },
+        "vehicle": {
+          "batteryVoltageVolts": null,
+          "flightMode": "AUTO"
+        },
+        "fault": {
+          "active": true,
+          "type": "engine_failure"
+        },
+        "location": {
+          "latitudeDegrees": 39.90422,
+          "longitudeDegrees": 116.40784,
+          "altitudeMeters": 163.7
+        },
+        "sensorStates": [
+          {
+            "sensorId": "beijing-flight-demo/imu-0",
+            "platformId": "beijing-flight-demo",
+            "type": "IMU",
+            "status": "NOMINAL",
+            "freshnessMs": 20,
+            "quality": 0.96,
+            "metrics": {
+              "rollDeg": 3.4,
+              "pitchDeg": -2.8,
+              "yawDeg": 89.1,
+              "clipping": false
+            },
+            "coverage": {
+              "mode": "ONBOARD"
+            },
+            "provenance": {
+              "adapter": "canonical-flight",
+              "dataset": "ALFA",
+              "timestampMs": 2000
+            }
+          },
+          {
+            "sensorId": "beijing-flight-demo/gnss-0",
+            "platformId": "beijing-flight-demo",
+            "type": "GNSS",
+            "status": "NOMINAL",
+            "freshnessMs": 200,
+            "quality": 0.94,
+            "metrics": {
+              "latitudeDeg": 39.90422,
+              "longitudeDeg": 116.40784,
+              "altitudeM": 163.7
+            },
+            "coverage": {
+              "mode": "GLOBAL"
+            },
+            "provenance": {
+              "adapter": "canonical-flight",
+              "dataset": "ALFA",
+              "timestampMs": 2000
+            }
+          },
+          {
+            "sensorId": "beijing-flight-demo/airspeed-0",
+            "platformId": "beijing-flight-demo",
+            "type": "AIRSPEED",
+            "status": "DEGRADED",
+            "freshnessMs": 100,
+            "quality": 0.7,
+            "metrics": {
+              "airSpeedMps": 16.2,
+              "groundSpeedMps": 16.9
+            },
+            "coverage": {
+              "mode": "ONBOARD"
+            },
+            "provenance": {
+              "adapter": "canonical-flight",
+              "dataset": "ALFA",
+              "timestampMs": 2000
+            }
+          },
+          {
+            "sensorId": "beijing-flight-demo/battery-0",
+            "platformId": "beijing-flight-demo",
+            "type": "BATTERY",
+            "status": "UNKNOWN",
+            "freshnessMs": 1000,
+            "quality": 0.5,
+            "metrics": {
+              "voltageV": null,
+              "flightMode": "AUTO"
+            },
+            "coverage": {
+              "mode": "ONBOARD"
+            },
+            "provenance": {
+              "adapter": "canonical-flight",
+              "dataset": "ALFA",
+              "timestampMs": 2000
+            }
+          },
+          {
+            "sensorId": "beijing-flight-demo/engine-monitor-0",
+            "platformId": "beijing-flight-demo",
+            "type": "ENGINE",
+            "status": "DEGRADED",
+            "freshnessMs": 250,
+            "quality": 1.0,
+            "metrics": {
+              "faultActive": true,
+              "faultType": "engine_failure"
+            },
+            "coverage": {
+              "mode": "ONBOARD"
+            },
+            "provenance": {
+              "adapter": "canonical-flight",
+              "dataset": "ALFA",
+              "timestampMs": 2000
+            }
+          }
+        ]
+      }
     }
   }
 }

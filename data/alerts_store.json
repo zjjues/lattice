@@ -62,6 +62,255 @@
       },
       "createdAt": "2026-07-08T02:33:33.952689Z",
       "updatedAt": "2026-07-08T02:33:33.952689Z"
+    },
+    "ALERT_20260730_014350_FB9BC6": {
+      "alertId": "ALERT_20260730_014350_FB9BC6",
+      "entityId": "alfa_engine_failure_sample",
+      "sourceType": "flight-dataset",
+      "sourceId": "alfa_engine_failure_sample",
+      "alertType": "fast_approach",
+      "riskLevel": "HIGH",
+      "title": "目标高速接近",
+      "summary": "目标速度超过阈值，存在快速逼近风险。",
+      "status": "OPEN",
+      "location": {
+        "latitudeDegrees": 37.22811,
+        "longitudeDegrees": -80.42127
+      },
+      "evidence": [
+        "来源: flight-dataset / alfa_engine_failure_sample",
+        "位置: 37.22811, -80.42127",
+        "速度 19.1 m/s 高于阈值 18.0 m/s"
+      ],
+      "metadata": {
+        "eventId": "INGEST_20260730_014350_AFEE49",
+        "zone": null,
+        "speedMps": 19.1,
+        "tags": [
+          "flight",
+          "alfa"
+        ]
+      },
+      "createdAt": "2026-07-30T01:43:50.835271Z",
+      "updatedAt": "2026-07-30T01:43:50.835271Z"
+    },
+    "ALERT_20260730_014646_B601CA": {
+      "alertId": "ALERT_20260730_014646_B601CA",
+      "entityId": "alfa-e2e-mvp",
+      "sourceType": "flight-dataset",
+      "sourceId": "alfa-e2e-mvp",
+      "alertType": "flight_low_airspeed",
+      "riskLevel": "MEDIUM",
+      "title": "Fixed-wing airspeed is low",
+      "summary": "Airspeed is below the MVP threshold; verify sensor validity and aircraft energy state.",
+      "status": "OPEN",
+      "location": {
+        "latitudeDegrees": 37.22812,
+        "longitudeDegrees": -80.42106
+      },
+      "evidence": [
+        "dataset=ALFA",
+        "airspeed=16.2 m/s, threshold=17.0 m/s"
+      ],
+      "metadata": {
+        "eventId": "INGEST_20260730_014646_71056B",
+        "zone": null,
+        "speedMps": 16.9,
+        "tags": [
+          "flight",
+          "alfa"
+        ],
+        "latestRecommendationId": "REC_20260730_090836_1B0CB4"
+      },
+      "createdAt": "2026-07-30T01:46:46.734698Z",
+      "updatedAt": "2026-07-30T09:08:36.436053Z"
+    },
+    "ALERT_20260730_014646_0B8AE8": {
+      "alertId": "ALERT_20260730_014646_0B8AE8",
+      "entityId": "alfa-e2e-mvp",
+      "sourceType": "flight-dataset",
+      "sourceId": "alfa-e2e-mvp",
+      "alertType": "dataset_fault_annotation",
+      "riskLevel": "HIGH",
+      "title": "Dataset fault annotation: engine_failure",
+      "summary": "The source dataset marks this frame as faulty. This is ground truth, not a model detection.",
+      "status": "OPEN",
+      "location": {
+        "latitudeDegrees": 37.22812,
+        "longitudeDegrees": -80.42106
+      },
+      "evidence": [
+        "dataset=ALFA",
+        "groundTruth=true",
+        "faultType=engine_failure"
+      ],
+      "metadata": {
+        "eventId": "INGEST_20260730_014646_71056B",
+        "zone": null,
+        "speedMps": 16.9,
+        "tags": [
+          "flight",
+          "alfa"
+        ]
+      },
+      "createdAt": "2026-07-30T01:46:46.734789Z",
+      "updatedAt": "2026-07-30T01:46:46.734789Z"
+    },
+    "ALERT_20260730_014842_81F0F5": {
+      "alertId": "ALERT_20260730_014842_81F0F5",
+      "entityId": "flight-http-test",
+      "sourceType": "flight-dataset",
+      "sourceId": "flight-http-test",
+      "alertType": "flight_low_airspeed",
+      "riskLevel": "MEDIUM",
+      "title": "固定翼飞行器空速偏低",
+      "summary": "空速低于验证阈值，请核验传感器有效性并检查飞行器能量状态。",
+      "status": "OPEN",
+      "location": {
+        "latitudeDegrees": 37.22812,
+        "longitudeDegrees": -80.42106
+      },
+      "evidence": [
+        "dataset=ALFA",
+        "空速=16.2米/秒，阈值=17.0米/秒"
+      ],
+      "metadata": {
+        "eventId": "INGEST_20260801_084249_1C97FA",
+        "zone": null,
+        "speedMps": 16.9,
+        "tags": [
+          "flight",
+          "alfa"
+        ]
+      },
+      "createdAt": "2026-07-30T01:48:42.267308Z",
+      "updatedAt": "2026-08-01T08:42:49.584196Z"
+    },
+    "ALERT_20260730_014842_1E05B0": {
+      "alertId": "ALERT_20260730_014842_1E05B0",
+      "entityId": "flight-http-test",
+      "sourceType": "flight-dataset",
+      "sourceId": "flight-http-test",
+      "alertType": "dataset_fault_annotation",
+      "riskLevel": "HIGH",
+      "title": "数据集故障标注：发动机故障",
+      "summary": "源数据集将当前帧标记为故障状态；这是样本真值，并非模型检测结果。",
+      "status": "OPEN",
+      "location": {
+        "latitudeDegrees": 37.22812,
+        "longitudeDegrees": -80.42106
+      },
+      "evidence": [
+        "dataset=ALFA",
+        "样本真值=是",
+        "故障类型=发动机故障"
+      ],
+      "metadata": {
+        "eventId": "INGEST_20260801_084249_1C97FA",
+        "zone": null,
+        "speedMps": 16.9,
+        "tags": [
+          "flight",
+          "alfa"
+        ]
+      },
+      "createdAt": "2026-07-30T01:48:42.267369Z",
+      "updatedAt": "2026-08-01T08:42:49.584229Z"
+    },
+    "ALERT_20260730_015030_59FEA1": {
+      "alertId": "ALERT_20260730_015030_59FEA1",
+      "entityId": "beijing-flight-demo",
+      "sourceType": "flight-dataset",
+      "sourceId": "beijing-flight-demo",
+      "alertType": "fast_approach",
+      "riskLevel": "HIGH",
+      "title": "目标高速接近",
+      "summary": "目标速度超过阈值，存在快速逼近风险。",
+      "status": "OPEN",
+      "location": {
+        "latitudeDegrees": 39.904210000000006,
+        "longitudeDegrees": 116.40762999999998
+      },
+      "evidence": [
+        "来源: flight-dataset / beijing-flight-demo",
+        "位置: 39.90421, 116.40763",
+        "速度 19.1 m/s 高于阈值 18.0 m/s"
+      ],
+      "metadata": {
+        "eventId": "INGEST_20260801_084250_B9B09D",
+        "zone": null,
+        "speedMps": 19.1,
+        "tags": [
+          "flight",
+          "alfa"
+        ],
+        "latestRecommendationId": "REC_20260730_091216_996071"
+      },
+      "createdAt": "2026-07-30T01:50:30.313768Z",
+      "updatedAt": "2026-08-01T08:42:50.796347Z"
+    },
+    "ALERT_20260730_015030_7C045F": {
+      "alertId": "ALERT_20260730_015030_7C045F",
+      "entityId": "beijing-flight-demo",
+      "sourceType": "flight-dataset",
+      "sourceId": "beijing-flight-demo",
+      "alertType": "dataset_fault_annotation",
+      "riskLevel": "HIGH",
+      "title": "数据集故障标注：发动机故障",
+      "summary": "源数据集将当前帧标记为故障状态；这是样本真值，并非模型检测结果。",
+      "status": "OPEN",
+      "location": {
+        "latitudeDegrees": 39.90422,
+        "longitudeDegrees": 116.40784
+      },
+      "evidence": [
+        "dataset=ALFA",
+        "样本真值=是",
+        "故障类型=发动机故障"
+      ],
+      "metadata": {
+        "eventId": "INGEST_20260801_084250_ACF1B2",
+        "zone": null,
+        "speedMps": 16.9,
+        "tags": [
+          "flight",
+          "alfa"
+        ],
+        "latestRecommendationId": "REC_20260730_064559_B9FCD0"
+      },
+      "createdAt": "2026-07-30T01:50:30.317266Z",
+      "updatedAt": "2026-08-01T08:42:50.811530Z"
+    },
+    "ALERT_20260730_015030_F21D08": {
+      "alertId": "ALERT_20260730_015030_F21D08",
+      "entityId": "beijing-flight-demo",
+      "sourceType": "flight-dataset",
+      "sourceId": "beijing-flight-demo",
+      "alertType": "flight_low_airspeed",
+      "riskLevel": "MEDIUM",
+      "title": "固定翼飞行器空速偏低",
+      "summary": "空速低于验证阈值，请核验传感器有效性并检查飞行器能量状态。",
+      "status": "OPEN",
+      "location": {
+        "latitudeDegrees": 39.90422,
+        "longitudeDegrees": 116.40784
+      },
+      "evidence": [
+        "dataset=ALFA",
+        "空速=16.2米/秒，阈值=17.0米/秒"
+      ],
+      "metadata": {
+        "eventId": "INGEST_20260801_084250_ACF1B2",
+        "zone": null,
+        "speedMps": 16.9,
+        "tags": [
+          "flight",
+          "alfa"
+        ],
+        "latestRecommendationId": "REC_20260730_022746_CC50C7"
+      },
+      "createdAt": "2026-07-30T01:50:30.320089Z",
+      "updatedAt": "2026-08-01T08:42:50.811500Z"
     }
   }
 }

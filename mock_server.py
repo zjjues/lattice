@@ -906,6 +906,7 @@ def build_recommendation_context(alert: dict[str, Any], entity: dict[str, Any]) 
             },
         },
         "threat": threat,
+        "flightTelemetry": entity.get("flightTelemetry", {}),
         "knowledge": [],
     }
 
@@ -1363,6 +1364,10 @@ def build_track_history(track_id: str, *, limit: int = 20) -> list[dict[str, Any
         longitude = location.get("longitudeDegrees")
         if not isinstance(latitude, (int, float)) or not isinstance(longitude, (int, float)):
             continue
+        raw = event.get("raw", {}) if isinstance(event.get("raw"), dict) else {}
+        telemetry = raw.get("flightTelemetry", {})
+        telemetry = telemetry if isinstance(telemetry, dict) else {}
+        attitude = telemetry.get("attitude", {}) if isinstance(telemetry.get("attitude"), dict) else {}
         history.append(
             {
                 "eventId": event.get("eventId"),
@@ -1371,6 +1376,10 @@ def build_track_history(track_id: str, *, limit: int = 20) -> list[dict[str, Any
                 "longitudeDegrees": float(longitude),
                 "speedMps": track.get("speedMps"),
                 "headingDegrees": track.get("headingDegrees"),
+                "altitudeMeters": track.get("altitudeMeters"),
+                "rollDegrees": attitude.get("rollDegrees"),
+                "pitchDegrees": attitude.get("pitchDegrees"),
+                "yawDegrees": attitude.get("yawDegrees"),
             }
         )
     return history

@@ -3,129 +3,54 @@ set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 RUN_DIR="$ROOT_DIR/run"
-SERVER_PID_FILE="$RUN_DIR/mock_server.pid"
-AGENT_PID_FILE="$RUN_DIR/sim_agent.pid"
 DRY_RUN=0
 
-usage() {
-  cat <<'EOF'
-用法：
-  bash scripts/stop_demo_env.sh [--dry-run]
+usage() { echo '用法：bash scripts/stop_demo_env.sh [--dry-run]'; }
+log() { printf '[lattice] %s\n' "$1"; }
+is_running() { local pid="${1:-}"; [[ "$pid" =~ ^[0-9]+$ ]] && kill -0 "$pid" >/dev/null 2>&1; }
 
-参数：
-  --dry-run  只打印将要停止的进程，不真正发送 kill
-EOF
-}
-
-log() {
-  printf '[stop-demo] %s\n' "$1"
-}
-
-is_pid_running() {
-  local pid="$1"
-  [[ -n "$pid" ]] || return 1
-  kill -0 "$pid" >/dev/null 2>&1
-}
-
-find_existing_server_pids() {
-  pgrep -f "uvicorn mock_server:app --reload --host 127.0.0.1 --port 8000" || true
-}
-
-find_existing_agent_pids() {
-  pgrep -f "python3 tools/sim_agent.py --asset-id SIM_ASSET_001" || true
-}
-
-parse_args() {
-  while [[ $# -gt 0 ]]; do
-    case "$1" in
-      --dry-run)
-        DRY_RUN=1
-        shift
-        ;;
-      -h|--help)
-        usage
-        exit 0
-        ;;
-      *)
-        printf '未知参数: %s\n' "$1" >&2
-        usage >&2
-        exit 1
-        ;;
-    esac
-  done
-}
-
-stop_pid() {
-  local pid="$1"
-  local label="$2"
-  if ! is_pid_running "$pid"; then
-    log "$label PID=$pid 不在运行"
+stop_process() {
+  local pid_file="$1" label="$2" expected="$3"
+  [[ -f "$pid_file" ]] || { log "$label 未记录 PID"; return 0; }
+  local pid command_line
+  pid="$(cat "$pid_file" 2>/dev/null || true)"
+  if ! is_running "$pid"; then
+    log "$label 未运行，清理过期 PID 文件"
+    [[ "$DRY_RUN" -eq 1 ]] || rm -f "$pid_file"
     return 0
   fi
-
+  command_line="$(ps -p "$pid" -o args= 2>/dev/null || true)"
+  if [[ "$command_line" != *"$expected"* ]]; then
+    printf '%s PID=%s 与本工程命令不匹配，拒绝停止：%s\n' "$label" "$pid" "$command_line" >&2
+    return 1
+  fi
   if [[ "$DRY_RUN" -eq 1 ]]; then
     log "DRY-RUN: kill $pid ($label)"
     return 0
   fi
-
   kill "$pid"
+  local attempt
+  for attempt in {1..20}; do is_running "$pid" || break; sleep 0.1; done
+  if is_running "$pid"; then
+    printf '%s PID=%s 未在超时时间内退出\n' "$label" "$pid" >&2
+    return 1
+  fi
+  rm -f "$pid_file"
   log "已停止 $label，PID=$pid"
 }
 
-stop_from_pid_file() {
-  local pid_file="$1"
-  local label="$2"
-  if [[ ! -f "$pid_file" ]]; then
-    return 1
-  fi
-
-  local pid=""
-  pid="$(cat "$pid_file" 2>/dev/null || true)"
-  [[ -n "$pid" ]] || return 1
-  stop_pid "$pid" "$label"
-  if [[ "$DRY_RUN" -eq 0 ]]; then
-    rm -f "$pid_file"
-  fi
-  return 0
-}
-
-stop_by_pattern() {
-  local label="$1"
-  shift
-  local pids
-  pids="$("$@")"
-  if [[ -z "$pids" ]]; then
-    log "未发现正在运行的 $label"
-    return 0
-  fi
-
-  while IFS= read -r pid; do
-    [[ -n "$pid" ]] || continue
-    stop_pid "$pid" "$label"
-  done <<<"$pids"
-}
-
 main() {
-  parse_args "$@"
-
-  local handled_server=0
-  local handled_agent=0
-
-  if stop_from_pid_file "$SERVER_PID_FILE" "mock server"; then
-    handled_server=1
-  fi
-  if stop_from_pid_file "$AGENT_PID_FILE" "sim_agent"; then
-    handled_agent=1
-  fi
-
-  if [[ "$handled_server" -eq 0 ]]; then
-    stop_by_pattern "mock server" find_existing_server_pids
-  fi
-  if [[ "$handled_agent" -eq 0 ]]; then
-    stop_by_pattern "sim_agent" find_existing_agent_pids
-  fi
-
-  log "演示环境停止流程已完成"
+  while [[ $# -gt 0 ]]; do
+    case "$1" in
+      --dry-run) DRY_RUN=1; shift ;;
+      -h|--help) usage; exit 0 ;;
+      *) printf '未知参数: %s\n' "$1" >&2; usage >&2; exit 2 ;;
+    esac
+  done
+  local failed=0
+  stop_process "$RUN_DIR/lattice_agent.pid" '模拟 Agent' 'tools/sim_agent.py' || failed=1
+  stop_process "$RUN_DIR/lattice_server.pid" 'Lattice 服务' 'uvicorn' || failed=1
+  [[ "$failed" -eq 0 ]]
 }
 
 main "$@"

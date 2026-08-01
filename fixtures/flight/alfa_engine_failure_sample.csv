@@ -1,0 +1,4 @@
+time,latitude,longitude,altitude,roll_deg,pitch_deg,yaw_deg,velocity_north,velocity_east,velocity_down,airspeed_mps,ground_speed,throttle_command,fault_active,fault_type,mode
+0.0,37.22810,-80.42150,165.0,1.2,2.4,88.0,0.7,20.1,-0.1,21.0,20.2,0.52,false,engine_failure,AUTO
+1.0,37.22811,-80.42127,164.8,1.8,0.8,88.4,0.7,19.0,0.5,19.4,19.1,0.82,true,engine_failure,AUTO
+2.0,37.22812,-80.42106,163.7,3.4,-2.8,89.1,0.5,16.8,1.9,16.2,16.9,0.96,true,engine_failure,AUTO

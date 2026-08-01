@@ -33,6 +33,263 @@
       "status": "TASK_CREATED",
       "createdAt": "2026-07-08T02:34:22.466699Z",
       "updatedAt": "2026-07-08T02:34:22.482398Z"
+    },
+    "REC_20260730_015943_091463": {
+      "recommendationId": "REC_20260730_015943_091463",
+      "alertId": "ALERT_20260730_015030_7C045F",
+      "entityId": "beijing-flight-demo",
+      "stateSignature": "c15e10ebc5f9a293a08b8ce946e8f7478dd72f3f68e12c7aecea00cbe3ab614f",
+      "summary": "The dataset marks a fault as active; treat it as ground truth for pipeline validation, not an inferred diagnosis.",
+      "riskLevel": "HIGH",
+      "actions": [
+        "Confirm fault type and annotation start time",
+        "Correlate throttle, airspeed, altitude and attitude trends",
+        "Present the matching SOP to an operator before creating a task"
+      ],
+      "recommendedAssetTypes": [
+        "OPERATOR",
+        "ANALYTICS"
+      ],
+      "confidence": 1.0,
+      "references": [
+        {
+          "docId": "engine_failure",
+          "title": "Fixed-wing engine failure response"
+        },
+        {
+          "docId": "data_quality",
+          "title": "Telemetry data quality"
+        },
+        {
+          "docId": "low_airspeed",
+          "title": "Low airspeed response"
+        }
+      ],
+      "provider": "flight-rule-sop",
+      "providerMetadata": {
+        "llmUsed": false,
+        "humanConfirmationRequired": true
+      },
+      "status": "GENERATED",
+      "createdAt": "2026-07-30T01:59:43.996581Z",
+      "updatedAt": "2026-07-30T01:59:43.996581Z"
+    },
+    "REC_20260730_022448_DDC41F": {
+      "recommendationId": "REC_20260730_022448_DDC41F",
+      "alertId": "ALERT_20260730_015030_7C045F",
+      "entityId": "beijing-flight-demo",
+      "stateSignature": "aa4a72c156025d94af843f41337063a5b7787d2a6bc23d30ba81e9fd7373d700",
+      "summary": "数据集已标注故障处于活动状态；该信息用于验证处理链路，不代表模型推断结果。",
+      "riskLevel": "HIGH",
+      "actions": [
+        "确认故障类型和标注开始时间",
+        "关联分析油门、空速、高度和姿态趋势",
+        "创建任务前向操作员展示匹配的处置预案"
+      ],
+      "recommendedAssetTypes": [
+        "OPERATOR",
+        "ANALYTICS"
+      ],
+      "confidence": 1.0,
+      "references": [
+        {
+          "docId": "engine_failure",
+          "title": "固定翼发动机故障处置预案"
+        },
+        {
+          "docId": "data_quality",
+          "title": "遥测数据质量检查"
+        },
+        {
+          "docId": "low_airspeed",
+          "title": "低空速处置预案"
+        }
+      ],
+      "provider": "飞行规则与处置预案",
+      "providerMetadata": {
+        "llmUsed": false,
+        "humanConfirmationRequired": true
+      },
+      "status": "GENERATED",
+      "createdAt": "2026-07-30T02:24:48.493393Z",
+      "updatedAt": "2026-07-30T02:24:48.493393Z"
+    },
+    "REC_20260730_022746_CC50C7": {
+      "recommendationId": "REC_20260730_022746_CC50C7",
+      "alertId": "ALERT_20260730_015030_F21D08",
+      "entityId": "beijing-flight-demo",
+      "stateSignature": "f834ad96dc0b44240c3deaba5c36309c53dbb9c23ef55ebb2563467f00cd5147",
+      "summary": "建议核验空速数据，并在飞行器限制范围内稳定能量状态。",
+      "riskLevel": "MEDIUM",
+      "actions": [
+        "交叉核对空速、地速与姿态数据",
+        "避免急转并持续监测高度趋势",
+        "变更任务前必须由操作员确认"
+      ],
+      "recommendedAssetTypes": [
+        "OPERATOR",
+        "FLIGHT_CONTROLLER"
+      ],
+      "confidence": 0.8,
+      "references": [
+        {
+          "docId": "engine_failure",
+          "title": "固定翼发动机故障处置预案"
+        },
+        {
+          "docId": "low_airspeed",
+          "title": "低空速处置预案"
+        },
+        {
+          "docId": "SOP_UAV_INTRUSION_001",
+          "title": "无人机进入警戒区处置预案"
+        }
+      ],
+      "provider": "飞行规则与处置预案",
+      "providerMetadata": {
+        "llmUsed": false,
+        "humanConfirmationRequired": true
+      },
+      "status": "GENERATED",
+      "createdAt": "2026-07-30T02:27:46.726535Z",
+      "updatedAt": "2026-07-30T02:27:46.726535Z"
+    },
+    "REC_20260730_064559_B9FCD0": {
+      "recommendationId": "REC_20260730_064559_B9FCD0",
+      "alertId": "ALERT_20260730_015030_7C045F",
+      "entityId": "beijing-flight-demo",
+      "stateSignature": "323c12b5b9b961751204df4270a127d0a09aab1e97d8a41e2012eae11235d8d3",
+      "summary": "数据集已标注故障处于活动状态；该信息用于验证处理链路，不代表模型推断结果。",
+      "riskLevel": "HIGH",
+      "actions": [
+        "确认故障类型和标注开始时间",
+        "关联分析油门、空速、高度和姿态趋势",
+        "创建任务前向操作员展示匹配的处置预案"
+      ],
+      "recommendedAssetTypes": [
+        "OPERATOR",
+        "ANALYTICS"
+      ],
+      "confidence": 1.0,
+      "references": [
+        {
+          "docId": "data_quality",
+          "title": "遥测数据质量检查"
+        },
+        {
+          "docId": "engine_failure",
+          "title": "固定翼发动机故障处置预案"
+        },
+        {
+          "docId": "low_airspeed",
+          "title": "低空速处置预案"
+        }
+      ],
+      "provider": "飞行规则与处置预案",
+      "providerMetadata": {
+        "llmUsed": false,
+        "humanConfirmationRequired": true
+      },
+      "status": "GENERATED",
+      "createdAt": "2026-07-30T06:45:59.360173Z",
+      "updatedAt": "2026-07-30T06:45:59.360173Z"
+    },
+    "REC_20260730_090836_1B0CB4": {
+      "recommendationId": "REC_20260730_090836_1B0CB4",
+      "alertId": "ALERT_20260730_014646_B601CA",
+      "entityId": "alfa-e2e-mvp",
+      "stateSignature": "d42e17ea088046909d47183c8601c5f1e843194600d3b188cb37faabb5c367ea",
+      "summary": "空速低于最低安全阈值，遥测显示发动机故障激活，且源数据集标注该帧异常，可能影响传感器可信度。需综合空速、地速及发动机参数核验，并维持能量稳定。",
+      "riskLevel": "MEDIUM",
+      "actions": [
+        "交叉核对空速、地速、俯仰/滚转姿态与发动机遥测数据，验证传感器有效性及故障真实性。",
+        "避免急转及大幅改变俯仰或坡度，持续监控高度下降率和能量状态。",
+        "若确认空速持续偏低，操作员须人工设定并确认符合机型限制的最佳滑翔目标速度，不得直接指令推力改变。",
+        "评估可达的应急迫降区域并提示操作员选择，执行前必须获得操作员确认。",
+        "任何任务变更或返航决策，必须在操作员确认后方可执行。"
+      ],
+      "recommendedAssetTypes": [
+        "OPERATOR",
+        "FLIGHT_CONTROLLER"
+      ],
+      "confidence": 0.85,
+      "references": [
+        {
+          "docId": "8a2e93d258f44aed8a32fd16751b7000",
+          "title": "low_airspeed.md",
+          "score": 0.652991
+        },
+        {
+          "docId": "b5b37e55952b4c16a1fc0604b5035136",
+          "title": "engine_failure.md",
+          "score": 0.62445
+        },
+        {
+          "docId": "2bfe56fa6a9949319008bfe8d5aef1c5",
+          "title": "low_battery.md",
+          "score": 0.540752
+        }
+      ],
+      "provider": "规则 + RAG + 大模型",
+      "providerMetadata": {
+        "llmUsed": true,
+        "model": "deepseek-v4-pro",
+        "ragUsed": true,
+        "knowledgeHits": 3,
+        "humanConfirmationRequired": true,
+        "degraded": false
+      },
+      "status": "GENERATED",
+      "createdAt": "2026-07-30T09:08:36.434764Z",
+      "updatedAt": "2026-07-30T09:08:36.434764Z"
+    },
+    "REC_20260730_091216_996071": {
+      "recommendationId": "REC_20260730_091216_996071",
+      "alertId": "ALERT_20260730_015030_59FEA1",
+      "entityId": "beijing-flight-demo",
+      "stateSignature": "1c37b37d72ffc85f4fe7998bd211fee1dfe3461a05bebd79de21dde286c9dab8",
+      "summary": "建议重点关注高速接近的UAV目标，优先确认其轨迹意图。",
+      "riskLevel": "HIGH",
+      "actions": [
+        "观察速度和航向是否持续指向敏感区域",
+        "结合相邻传感器继续确认目标性质",
+        "准备创建侦察或跟踪任务"
+      ],
+      "recommendedAssetTypes": [
+        "RADAR",
+        "EO_SENSOR",
+        "OPERATOR"
+      ],
+      "confidence": 0.76,
+      "references": [
+        {
+          "docId": "8a2e93d258f44aed8a32fd16751b7000",
+          "title": "low_airspeed.md",
+          "score": 0.665366
+        },
+        {
+          "docId": "13b8f30d222a442e9628e9a5c7ac58a0",
+          "title": "collision_risk.md",
+          "score": 0.617403
+        },
+        {
+          "docId": "697b1e28b53f4a41801456a32f37cfdc",
+          "title": "attitude_limit.md",
+          "score": 0.577266
+        }
+      ],
+      "provider": "规则 + RAG（模型降级）",
+      "providerMetadata": {
+        "llmUsed": false,
+        "ragUsed": true,
+        "knowledgeHits": 3,
+        "humanConfirmationRequired": true,
+        "degraded": true,
+        "reason": "模型调用失败: TimeoutError"
+      },
+      "status": "GENERATED",
+      "createdAt": "2026-07-30T09:12:16.192850Z",
+      "updatedAt": "2026-07-30T09:12:16.192850Z"
     }
   }
 }

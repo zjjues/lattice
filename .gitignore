@@ -6,3 +6,5 @@ logs/
 run/
 objects/
 .venv/
+data/model_provider.json
+data/model_provider.tmp

@@ -5,13 +5,13 @@
       "taskType": "RESPOND_TO_RECOMMENDATION",
       "title": "根据建议执行处置任务",
       "description": "持续跟踪目标轨迹",
-      "status": "ASSIGNED",
+      "status": "SUCCEEDED",
       "priority": "NORMAL",
       "relatedEntityId": "TRACK_UAV_001",
       "assignedAssetId": "SIM_ASSET_001",
-      "resultSummary": null,
+      "resultSummary": "处置完成：SIM_ASSET_001 已接收并执行威胁响应任务，目标 TRACK_UAV_001 的威胁等级为 UNKNOWN，异常类型为 未知。执行建议：继续常规监控。",
       "createdAt": "2026-07-08T02:34:22.481965Z",
-      "updatedAt": "2026-07-08T02:34:22.481965Z",
+      "updatedAt": "2026-07-28T07:55:12.115419Z",
       "metadata": {
         "createdFrom": "recommendation",
         "alertId": "ALERT_20260708_023333_77EC4C",
@@ -22,7 +22,14 @@
           "固定式微波干扰站",
           "多旋翼侦察无人机",
           "光电追踪球"
-        ]
+        ],
+        "result": {
+          "agentId": "SIM_ASSET_001",
+          "relatedEntityId": "TRACK_UAV_001",
+          "threatAnalysis": {},
+          "completedAt": "2026-07-28T07:55:12.102787Z",
+          "workflow": "SIMULATED_THREAT_RESPONSE"
+        }
       }
     }
   }
