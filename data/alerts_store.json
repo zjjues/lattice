@@ -175,7 +175,7 @@
         "空速=16.2米/秒，阈值=17.0米/秒"
       ],
       "metadata": {
-        "eventId": "INGEST_20260801_084249_1C97FA",
+        "eventId": "INGEST_20260801_144339_68C146",
         "zone": null,
         "speedMps": 16.9,
         "tags": [
@@ -184,7 +184,7 @@
         ]
       },
       "createdAt": "2026-07-30T01:48:42.267308Z",
-      "updatedAt": "2026-08-01T08:42:49.584196Z"
+      "updatedAt": "2026-08-01T14:43:39.562910Z"
     },
     "ALERT_20260730_014842_1E05B0": {
       "alertId": "ALERT_20260730_014842_1E05B0",
@@ -206,7 +206,7 @@
         "故障类型=发动机故障"
       ],
       "metadata": {
-        "eventId": "INGEST_20260801_084249_1C97FA",
+        "eventId": "INGEST_20260801_144339_68C146",
         "zone": null,
         "speedMps": 16.9,
         "tags": [
@@ -215,7 +215,7 @@
         ]
       },
       "createdAt": "2026-07-30T01:48:42.267369Z",
-      "updatedAt": "2026-08-01T08:42:49.584229Z"
+      "updatedAt": "2026-08-01T14:43:39.562938Z"
     },
     "ALERT_20260730_015030_59FEA1": {
       "alertId": "ALERT_20260730_015030_59FEA1",
@@ -237,7 +237,7 @@
         "速度 19.1 m/s 高于阈值 18.0 m/s"
       ],
       "metadata": {
-        "eventId": "INGEST_20260801_084250_B9B09D",
+        "eventId": "INGEST_20260801_144340_898318",
         "zone": null,
         "speedMps": 19.1,
         "tags": [
@@ -247,7 +247,7 @@
         "latestRecommendationId": "REC_20260730_091216_996071"
       },
       "createdAt": "2026-07-30T01:50:30.313768Z",
-      "updatedAt": "2026-08-01T08:42:50.796347Z"
+      "updatedAt": "2026-08-01T14:43:40.807671Z"
     },
     "ALERT_20260730_015030_7C045F": {
       "alertId": "ALERT_20260730_015030_7C045F",
@@ -269,7 +269,7 @@
         "故障类型=发动机故障"
       ],
       "metadata": {
-        "eventId": "INGEST_20260801_084250_ACF1B2",
+        "eventId": "INGEST_20260801_144340_1D91B4",
         "zone": null,
         "speedMps": 16.9,
         "tags": [
@@ -279,7 +279,7 @@
         "latestRecommendationId": "REC_20260730_064559_B9FCD0"
       },
       "createdAt": "2026-07-30T01:50:30.317266Z",
-      "updatedAt": "2026-08-01T08:42:50.811530Z"
+      "updatedAt": "2026-08-01T14:43:40.837956Z"
     },
     "ALERT_20260730_015030_F21D08": {
       "alertId": "ALERT_20260730_015030_F21D08",
@@ -300,7 +300,7 @@
         "空速=16.2米/秒，阈值=17.0米/秒"
       ],
       "metadata": {
-        "eventId": "INGEST_20260801_084250_ACF1B2",
+        "eventId": "INGEST_20260801_144340_1D91B4",
         "zone": null,
         "speedMps": 16.9,
         "tags": [
@@ -310,7 +310,7 @@
         "latestRecommendationId": "REC_20260730_022746_CC50C7"
       },
       "createdAt": "2026-07-30T01:50:30.320089Z",
-      "updatedAt": "2026-08-01T08:42:50.811500Z"
+      "updatedAt": "2026-08-01T14:43:40.837932Z"
     }
   }
 }

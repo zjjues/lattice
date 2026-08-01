@@ -224,8 +224,8 @@
       "entityId": "flight-http-test",
       "description": "Simulated flight-dataset track ingested via local API",
       "isLive": true,
-      "createdTime": "2026-08-01T08:42:49.566007Z",
-      "expiryTime": "2026-08-01T08:42:49.578638Z",
+      "createdTime": "2026-08-01T14:43:39.520251Z",
+      "expiryTime": "2026-08-01T14:43:39.557586Z",
       "aliases": {
         "name": "flight-http-test"
       },
@@ -247,7 +247,7 @@
       },
       "provenance": {
         "source": "flight-http-test",
-        "sourceUpdateTime": "2026-08-01T08:42:49.566007Z"
+        "sourceUpdateTime": "2026-08-01T14:43:39.520251Z"
       },
       "dataClassification": {
         "level": "UNCLASSIFIED"
@@ -426,8 +426,8 @@
       "entityId": "beijing-flight-demo",
       "description": "Simulated flight-dataset track ingested via local API",
       "isLive": true,
-      "createdTime": "2026-08-01T08:42:50.797211Z",
-      "expiryTime": "2026-08-01T08:42:50.808963Z",
+      "createdTime": "2026-08-01T14:43:40.808748Z",
+      "expiryTime": "2026-08-01T14:43:40.832603Z",
       "aliases": {
         "name": "beijing-flight-demo"
       },
@@ -449,7 +449,7 @@
       },
       "provenance": {
         "source": "beijing-flight-demo",
-        "sourceUpdateTime": "2026-08-01T08:42:50.797211Z"
+        "sourceUpdateTime": "2026-08-01T14:43:40.808748Z"
       },
       "dataClassification": {
         "level": "UNCLASSIFIED"

@@ -389,12 +389,74 @@ async def test_model_capability(request: Request) -> dict[str, Any]:
 
 # 态势传感器数据保留在 D 盘；接口按需返回小型快照。
 from lattice_core.flight.sensors import Px4UlogSensorAdapter, build_situation_snapshot
+from lattice_core.mission_scenario import ScenarioRuntime
 
 SENSOR_DATA_ROOT = Path(os.getenv("SENSOR_DATA_ROOT", "/mnt/d/lattice-data/datasets"))
 PX4_SAMPLE_PATH = Path(os.getenv("PX4_SAMPLE_PATH", SENSOR_DATA_ROOT / "px4/sample.ulg"))
 OPENSKY_SAMPLE_PATH = Path(
     os.getenv("OPENSKY_SAMPLE_PATH", SENSOR_DATA_ROOT / "opensky/beijing-states.json")
 )
+mission_scenario = ScenarioRuntime()
+
+
+@app.get("/api/v1/mission-scenario")
+def get_mission_scenario() -> dict[str, Any]:
+    return mission_scenario.snapshot()
+
+
+@app.post("/api/v1/mission-scenario/reset")
+async def reset_mission_scenario() -> dict[str, Any]:
+    snapshot = mission_scenario.reset()
+    await legacy.connection_manager.broadcast({
+        "type": "mission.scenario.reset", "scenario": snapshot,
+        "timestamp": legacy.utc_now_iso(),
+    })
+    return snapshot
+
+
+@app.post("/api/v1/mission-scenario/trigger")
+async def trigger_mission_scenario(request: Request) -> dict[str, Any]:
+    payload = await request.json()
+    snapshot = mission_scenario.trigger(str(payload.get("triggerType") or "unknown_air_target"))
+    await legacy.connection_manager.broadcast({
+        "type": "mission.trigger.detected", "scenarioId": snapshot["scenarioId"],
+        "trigger": snapshot["trigger"], "timestamp": legacy.utc_now_iso(),
+    })
+    return snapshot
+
+@app.post("/api/v1/mission-scenario/execute-plan")
+async def execute_mission_plan(request: Request) -> dict[str, Any]:
+    payload = await request.json()
+    try:
+        snapshot = mission_scenario.execute_plan(
+            str(payload.get("planId") or ""), bool(payload.get("confirmed")),
+        )
+    except ValueError as error:
+        raise HTTPException(status_code=400, detail=str(error)) from error
+    await legacy.connection_manager.broadcast({
+        "type": "mission.plan.simulated", "scenarioId": snapshot["scenarioId"],
+        "execution": snapshot["planExecution"], "timestamp": legacy.utc_now_iso(),
+    })
+    return snapshot
+
+@app.post("/api/v1/mission-scenario/back")
+async def back_mission_scenario() -> dict[str, Any]:
+    snapshot = mission_scenario.back()
+    await legacy.connection_manager.broadcast({
+        "type": "mission.stage.rolled_back", "scenarioId": snapshot["scenarioId"],
+        "stage": snapshot["activeStage"], "timestamp": legacy.utc_now_iso(),
+    })
+    return snapshot
+
+@app.post("/api/v1/mission-scenario/advance")
+async def advance_mission_scenario() -> dict[str, Any]:
+    snapshot = mission_scenario.advance()
+    await legacy.connection_manager.broadcast({
+        "type": "mission.stage.changed", "scenarioId": snapshot["scenarioId"],
+        "stage": snapshot["activeStage"], "timestamp": legacy.utc_now_iso(),
+    })
+    return snapshot
+
 
 
 @app.get("/api/v1/situation/{entity_id}")
